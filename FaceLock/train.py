@@ -27,7 +27,7 @@ def start():
 def face_lock(image):
 
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    face = cv2.CascadeClassifier('../XML/arcascade_frontalface_default.xml')
+    face = cv2.CascadeClassifier('../XML/haarcascade_frontalface_default.xml')
     faces = face.detectMultiScale(gray, 1.3, 5)
     if faces is ():
         return image, []
